@@ -2,17 +2,13 @@
 <html lang="en">
 
 <head>
+    <title>Home Telkom</title>
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Title -->
-    <title>Pemasukan</title>
-
-    <!-- Favicon -->
     <link rel="icon" href="<?php echo base_url("assets/img/login/logo3.png");?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="<?php echo base_url('assets/style.css');?>">
@@ -94,108 +90,59 @@
             </div>
         </div>
     </header>
-    <!-- ##### Header Area End ##### -->
 
-    <!-- ##### Breadcumb Area Start ##### -->
-    <div class="breadcumb-area bg-img" style="background-image: url('../assets/img/bg-img/breadcumb.jpg);">
-        <div class="bradcumbContent">
-            <h2>Pemasukan</h2>
-        </div>
-    </div>
-    <div class="blog-area mt-50 section-padding-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-8">
-                    <div class="academy-blog-posts">
-                        <div class="row">
-
-                            <!-- Single Blog Start -->
-                            <div class="col-12">
-                                <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
-                                    <!-- Post Thumb -->
-                                    <div class="blog-post-thumb mb-50">
-                                        <img src="<?php echo base_url("assets/img/gr-img/graphic.jpg");?>" alt="">
-                                    </div>
-                                    <!-- Post Title -->
-                                    <a href="#" class="post-title">Pemasukan Perbulan</a>
-                                    <!-- Post Meta -->
-                                    <div class="post-meta">
-                                        <p><a href="#">September 18, 2018</a>
-                                    </div>
-                                    <a href="<?php echo site_url('pemasukan');?>" class="btn academy-btn btn-sm mt-15">Edit</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- Pagination Area Start -->
-                    <div class="academy-pagination-area wow fadeInUp" data-wow-delay="400ms">
-                        <nav>
-                            <ul class="pagination">
-                                <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                                <li class="page-item"><a class="page-link" href="#">02</a></li>
-                                <li class="page-item"><a class="page-link" href="#">03</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="academy-blog-sidebar">
-                        <!-- Blog Post Widget -->
-                        <div class="blog-post-search-widget mb-30">
-                            <form action="#" method="post">
-                                <input type="search" name="search" id="Search" placeholder="Cari Pemasukan">
-                                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                            </form>
-                        </div>
-                        <div class="latest-blog-posts mb-30">
-                            <h5>Pemasukan Terbaru</h5>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex mb-30">
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>Pemasukan dari pemerintah</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex mb-30">
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>Pemasukan dari pemerintah</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex mb-30">
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>Pemasukan dari pemerintah</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex">
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>Pemasukan dari pemerintah</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="container-fluid">
+        <div class="row" style="margin-top: 80px">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <a type="button" class="btn btn-primary ?php if($url=='add'){echo 'actived';}?>" href="<?php echo site_url('pemasukan/add'); ?>">Add Pemasukan</a>
             </div>
+            <div class="col-md-2"></div>
         </div>
     </div>
-    <!-- ##### Blog Area End ##### -->
+    			
+	<div class="container"></div>
+		<div class="row">   	
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-8" style="margin-top: 30px">
+	    		<p><?php echo $this->session->flashdata('msg'); ?></p>
+	    		<table class="table">
+				  	<thead>
+					    <tr>
+					    	<th>ID Pemasukan</th>
+					      	<th>Nama Universitas</th>
+					      	<th>Nama Fakultas</th>
+					      	<th>Nama Jurusan</th>
+					      	<th>Tanggal Pemasukan</th>
+					      	<th>Jumlah Pemasukan</th>
+					      	<th>Asal Pemasukan</th>
+                            <th>Aksi</th>
+					    </tr>
+				  	</thead>
+				  	<tbody>
+				  		<?php foreach ($pemasukan as $key => $value) { ?>
+				    	<tr>
+				    		<th><?php echo $value['id_pemasukan'];?></th>
+					      	<td><?php echo $value['nama_univ'];?></td>
+					      	<td><?php echo $value['nama_fakultas'];?></td>
+					      	<td><?php echo $value['nama_jurusan'];?></td>
+					      	<td><?php echo $value['tanggal_pemasukan'];?></td>
+					      	<td><?php echo $value['jumlah_pemasukan'];?></td>
+					      	<td><?php echo $value['asal_pemasukan'];?></td>
+					      	<td>
+					      		<a type="button" class="btn btn-lg btn-warning fa fa-edit" href="<?php echo site_url('pemasukan/edit/'.$value['id_pemasukan']);?>"></a>
+					      		<a type="button" class="btn btn-lg btn-danger fa fa-trash" href="<?php echo site_url('pemasukan/delete/'.$value['id_pemasukan']);?>" onclick="return confirm('Are you sure?')"></a>
+					      	</td>
+				    	</tr>
+				    	<?php } ?>
+				  </tbody>
+				</table>
+	    	</div>
+	  	</div>
 
-    <footer class="footer-area">
+
+	  <footer class="footer-area">
         <div class="main-footer-area section-padding-100-0">
             <div class="container">
                 <div class="row">
@@ -259,3 +206,4 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 </body>
 
 </html>
+	

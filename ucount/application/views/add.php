@@ -2,16 +2,11 @@
 <html lang="en">
 
 <head>
+    <title>Home Telkom</title>
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Title -->
-    <title>Pemasukan</title>
-
-    <!-- Favicon -->
     <link rel="icon" href="<?php echo base_url("assets/img/login/logo3.png");?>">
 
     <!-- Core Stylesheet -->
@@ -94,108 +89,76 @@
             </div>
         </div>
     </header>
-    <!-- ##### Header Area End ##### -->
 
-    <!-- ##### Breadcumb Area Start ##### -->
-    <div class="breadcumb-area bg-img" style="background-image: url('../assets/img/bg-img/breadcumb.jpg);">
-        <div class="bradcumbContent">
-            <h2>Pemasukan</h2>
-        </div>
-    </div>
-    <div class="blog-area mt-50 section-padding-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-8">
-                    <div class="academy-blog-posts">
-                        <div class="row">
-
-                            <!-- Single Blog Start -->
-                            <div class="col-12">
-                                <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
-                                    <!-- Post Thumb -->
-                                    <div class="blog-post-thumb mb-50">
-                                        <img src="<?php echo base_url("assets/img/gr-img/graphic.jpg");?>" alt="">
-                                    </div>
-                                    <!-- Post Title -->
-                                    <a href="#" class="post-title">Pemasukan Perbulan</a>
-                                    <!-- Post Meta -->
-                                    <div class="post-meta">
-                                        <p><a href="#">September 18, 2018</a>
-                                    </div>
-                                    <a href="<?php echo site_url('pemasukan');?>" class="btn academy-btn btn-sm mt-15">Edit</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- Pagination Area Start -->
-                    <div class="academy-pagination-area wow fadeInUp" data-wow-delay="400ms">
-                        <nav>
-                            <ul class="pagination">
-                                <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                                <li class="page-item"><a class="page-link" href="#">02</a></li>
-                                <li class="page-item"><a class="page-link" href="#">03</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="academy-blog-sidebar">
-                        <!-- Blog Post Widget -->
-                        <div class="blog-post-search-widget mb-30">
-                            <form action="#" method="post">
-                                <input type="search" name="search" id="Search" placeholder="Cari Pemasukan">
-                                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                            </form>
-                        </div>
-                        <div class="latest-blog-posts mb-30">
-                            <h5>Pemasukan Terbaru</h5>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex mb-30">
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>Pemasukan dari pemerintah</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex mb-30">
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>Pemasukan dari pemerintah</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex mb-30">
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>Pemasukan dari pemerintah</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex">
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>Pemasukan dari pemerintah</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="container-fluid">
+        <div class="row" style="margin-top: 80px">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <a type="button" class="btn btn-primary ?php if($url=='index'){echo 'actived';}?>" href="<?php echo site_url('pemasukan'); ?>">Home</a>
             </div>
+            <div class="col-md-2"></div>
         </div>
     </div>
-    <!-- ##### Blog Area End ##### -->
 
-    <footer class="footer-area">
+
+	<div class="container-fluid">
+		<div class="row">   	
+			<div class="col-md-2"></div>
+	  	    <div class="col-md-8">
+	    	<h2>Form Input Pemasukan</h2>
+	    	<form method="POST" action="<?php echo site_url('pemasukan/addProses');?>">
+				<div class="form-group">
+				    <label for="exampleInputEmail1">Nama Universitas</label>
+				    <select name="nama_univ" class="form-control">
+                        <option value="none">---</option>
+                        <option value="Universitas Telkom">Universitas Telkom</option>
+                        <option value="Universitas  Udayana">Universitas  Udayana</option>
+                        <option value="Universitas Padjajaran">Universitas Padjajaran</option>
+                    </select>
+				</div>
+				<div class="form-group">
+				    <label for="exampleInputEmail1">Nama Fakultas</label>
+    				<select name="nama_fakultas" class="form-control">
+                        <option value="none">---</option>
+                        <option value="Fakultas Informatika">Fakultas Informatika</option>
+                        <option value="Fakultas Elektro">Fakultas Elektro</option>
+                        <option value="Fakultas Bisnis">Fakultas Bisnis</option>
+                    </select>
+				</div>
+				<div class="form-group">
+				    <label for="exampleInputEmail1">Nama Jurusan</label>
+				    <select name="nama_jurusan" class="form-control">
+                        <option value="none">---</option>
+                        <option value="Jurusan A">Jurusan A</option>
+                        <option value="Jurusan B">Jurusan B</option>
+                        <option value="Jurusan C">Jurusan C</option>
+                    </select>
+				</div>
+				<div class="form-group">
+				    <label for="exampleInputEmail1">Tanggal Pemasukan</label>
+				    <input type="date" class="form-control" name="tanggal_pemasukan" placeholder="Enter Tanggal Pemasukan">
+				</div>
+				<div class="form-group">
+				    <label for="exampleInputEmail1">Jumlah Pemasukan</label>
+				    <input type="text" class="form-control" name="jumlah_pemasukan" placeholder="Enter Jumlah Pemasukan">
+				</div>
+				<div class="form-group">
+				    <label for="exampleInputEmail1">Asal Pemasukan</label>
+				    <select name="asal_pemasukan" class="form-control">
+                        <option value="none">---</option>
+                        <option value="Pembayaran BPP">Pembayaran BPP</option>
+                        <option value="Sponsorship">Sponsorship</option>
+                        <option value="Uang Gedung">Uang Gedung</option>
+                    </select>
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+	    	</div>
+	  	</div>
+	</div>
+
+
+	<footer class="footer-area">
         <div class="main-footer-area section-padding-100-0">
             <div class="container">
                 <div class="row">
