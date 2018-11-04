@@ -95,7 +95,7 @@
         <div class="row" style="margin-top: 80px">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <a type="button" class="btn btn-primary ?php if($url=='add'){echo 'actived';}?>" href="<?php echo site_url('pemasukan/add'); ?>">Add Pemasukan</a>
+                <a type="button" class="btn btn-primary ?php if($url=='add'){echo 'actived';}?>" href="<?php echo site_url('pengeluaran/add'); ?>">Add Pengeluaran</a>
             </div>
             <div class="col-md-2"></div>
         </div>
@@ -110,29 +110,29 @@
 	    		<table class="table">
 				  	<thead>
 					    <tr>
-					    	<th>ID Pemasukan</th>
+					    	<th>ID Pengeluaran</th>
 					      	<th>Nama Universitas</th>
 					      	<th>Nama Fakultas</th>
 					      	<th>Nama Jurusan</th>
-					      	<th>Tanggal Pemasukan</th>
-					      	<th>Jumlah Pemasukan</th>
-					      	<th>Asal Pemasukan</th>
+					      	<th>Tanggal Pengeluaran</th>
+					      	<th>Jumlah Pengeluaran</th>
+					      	<th>Asal Pengeluaran</th>
                             <th>Aksi</th>
 					    </tr>
 				  	</thead>
 				  	<tbody>
-				  		<?php foreach ($pemasukan as $key => $value) { ?>
+				  		<?php foreach ($pengeluaran as $key => $value) { ?>
 				    	<tr>
-				    		<th><?php echo $value['id_pemasukan'];?></th>
+				    		<th><?php echo $value['id_pengeluaran'];?></th>
 					      	<td><?php echo $value['nama_univ'];?></td>
 					      	<td><?php echo $value['nama_fakultas'];?></td>
 					      	<td><?php echo $value['nama_jurusan'];?></td>
-					      	<td><?php echo $value['tanggal_pemasukan'];?></td>
-					      	<td><?php echo $value['jumlah_pemasukan'];?></td>
-					      	<td><?php echo $value['asal_pemasukan'];?></td>
+					      	<td><?php echo $value['tanggal_pengeluaran'];?></td>
+					      	<td><?php echo $value['jumlah_pengeluaran'];?></td>
+					      	<td><?php echo $value['asal_pengeluaran'];?></td>
 					      	<td>
-					      		<a type="button" class="btn btn-lg btn-warning fa fa-edit" href="<?php echo site_url('pemasukan/edit/'.$value['id_pemasukan']);?>"></a>
-					      		<a type="button" class="btn btn-lg btn-danger fa fa-trash" href="<?php echo site_url('pemasukan/delete/'.$value['id_pemasukan']);?>" onclick="return confirm('Are you sure?')"></a>
+					      		<a type="button" class="btn btn-lg btn-warning fa fa-edit" href="<?php echo site_url('pengeluaran/edit/'.$value['id_pengeluaran']);?>"></a>
+					      		<a type="button" class="btn btn-lg btn-danger fa fa-trash" href="<?php echo site_url('pengeluaran/delete/'.$value['id_pengeluaran']);?>" onclick="return confirm('Are you sure?')"></a>
 					      	</td>
 				    	</tr>
 				    	<?php } ?>

@@ -125,7 +125,7 @@
                                     <div class="post-meta">
                                         <p><a href="#">September 18, 2018</a>
                                     </div>
-                                    <a href="#" class="btn academy-btn btn-sm mt-15">Edit</a>
+                                    <a href="<?php echo site_url('pengeluaran');?>" class="btn academy-btn btn-sm mt-15">Edit</a>
                                 </div>
                             </div>
 

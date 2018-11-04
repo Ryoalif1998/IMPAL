@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Home Telkom</title>
+    <title>IMPAL</title>
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,7 +42,7 @@
         </div>
 
         <!-- Navbar Area -->
-        <div class="academy-main-menu">
+        <div class="academy-main-menu top-header">
             <div class="classy-nav-container breakpoint-off">
                 <div class="container">
                     <!-- Menu -->

@@ -8,7 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="<?php echo base_url("assets/img/login/logo3.png");?>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="<?php echo base_url('assets/style.css');?>">
@@ -32,7 +31,7 @@
                         <div class="header-content h-100 d-flex align-items-center justify-content-between">
                             <div class="academy-logo">
                                 <a href="<?php echo site_url('Cberanda');?>"><img src="<?php echo base_url("assets/img/core-img/logo.png");?>" alt=""></a>
-                            </div>
+                           </div>
                             <div class="login-content">
                                 <a href="#">Keluar</a>
                             </div>
@@ -95,54 +94,71 @@
         <div class="row" style="margin-top: 80px">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <a type="button" class="btn btn-primary ?php if($url=='add'){echo 'actived';}?>" href="<?php echo site_url('pemasukan/add'); ?>">Add Pemasukan</a>
+                <a type="button" class="btn btn-primary ?php if($url=='index'){echo 'actived';}?>" href="<?php echo site_url('pengeluaran'); ?>">Home</a>
             </div>
             <div class="col-md-2"></div>
         </div>
     </div>
-    			
-	<div class="container"></div>
+
+
+	<div class="container-fluid">
 		<div class="row">   	
-			<div class="col-md-2">
-			</div>
-			<div class="col-md-8" style="margin-top: 30px">
-	    		<p><?php echo $this->session->flashdata('msg'); ?></p>
-	    		<table class="table">
-				  	<thead>
-					    <tr>
-					    	<th>ID Pemasukan</th>
-					      	<th>Nama Universitas</th>
-					      	<th>Nama Fakultas</th>
-					      	<th>Nama Jurusan</th>
-					      	<th>Tanggal Pemasukan</th>
-					      	<th>Jumlah Pemasukan</th>
-					      	<th>Asal Pemasukan</th>
-                            <th>Aksi</th>
-					    </tr>
-				  	</thead>
-				  	<tbody>
-				  		<?php foreach ($pemasukan as $key => $value) { ?>
-				    	<tr>
-				    		<th><?php echo $value['id_pemasukan'];?></th>
-					      	<td><?php echo $value['nama_univ'];?></td>
-					      	<td><?php echo $value['nama_fakultas'];?></td>
-					      	<td><?php echo $value['nama_jurusan'];?></td>
-					      	<td><?php echo $value['tanggal_pemasukan'];?></td>
-					      	<td><?php echo $value['jumlah_pemasukan'];?></td>
-					      	<td><?php echo $value['asal_pemasukan'];?></td>
-					      	<td>
-					      		<a type="button" class="btn btn-lg btn-warning fa fa-edit" href="<?php echo site_url('pemasukan/edit/'.$value['id_pemasukan']);?>"></a>
-					      		<a type="button" class="btn btn-lg btn-danger fa fa-trash" href="<?php echo site_url('pemasukan/delete/'.$value['id_pemasukan']);?>" onclick="return confirm('Are you sure?')"></a>
-					      	</td>
-				    	</tr>
-				    	<?php } ?>
-				  </tbody>
-				</table>
+			<div class="col-md-2"></div>
+	  	    <div class="col-md-8">
+	    	<h2>Form Input Pengeluaran</h2>
+	    	<form method="POST" action="<?php echo site_url('pengeluaran/addProses');?>">
+				<div class="form-group">
+				    <label for="exampleInputEmail1">Nama Universitas</label>
+				    <select name="nama_univ" class="form-control">
+                        <option value="none">---</option>
+                        <option value="Universitas Telkom">Universitas Telkom</option>
+                        <option value="Universitas  Udayana">Universitas  Udayana</option>
+                        <option value="Universitas Padjajaran">Universitas Padjajaran</option>
+                    </select>
+				</div>
+				<div class="form-group">
+				    <label for="exampleInputEmail1">Nama Fakultas</label>
+    				<select name="nama_fakultas" class="form-control">
+                        <option value="none">---</option>
+                        <option value="Fakultas Informatika">Fakultas Informatika</option>
+                        <option value="Fakultas Elektro">Fakultas Elektro</option>
+                        <option value="Fakultas Bisnis">Fakultas Bisnis</option>
+                    </select>
+				</div>
+				<div class="form-group">
+				    <label for="exampleInputEmail1">Nama Jurusan</label>
+				    <select name="nama_jurusan" class="form-control">
+                        <option value="none">---</option>
+                        <option value="Jurusan A">Jurusan A</option>
+                        <option value="Jurusan B">Jurusan B</option>
+                        <option value="Jurusan C">Jurusan C</option>
+                    </select>
+				</div>
+				<div class="form-group">
+				    <label for="exampleInputEmail1">Tanggal Pengeluaran</label>
+				    <input type="date" class="form-control" name="tanggal_pengeluaran" placeholder="Enter Tanggal Pengeluaran">
+				</div>
+				<div class="form-group">
+				    <label for="exampleInputEmail1">Jumlah Pengeluaran</label>
+				    <input type="text" class="form-control" name="jumlah_pengeluaran" placeholder="Enter Jumlah Pengeluaran">
+				</div>
+				<div class="form-group">
+				    <label for="exampleInputEmail1">Asal Pengeluaran</label>
+				    <select name="asal_pengeluaran" class="form-control">
+                        <option value="none">---</option>
+                        <option value="Pembayaran BPP">Pembayaran BPP</option>
+                        <option value="Sponsorship">Sponsorship</option>
+                        <option value="Uang Gedung">Uang Gedung</option>
+                    </select>
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
 	    	</div>
 	  	</div>
+	</div>
 
 
-	  <footer class="footer-area">
+	<footer class="footer-area">
         <div class="main-footer-area section-padding-100-0">
             <div class="container">
                 <div class="row">
@@ -206,4 +222,3 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 </body>
 
 </html>
-	

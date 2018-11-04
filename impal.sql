@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 08, 2018 at 06:07 AM
+-- Generation Time: Nov 04, 2018 at 05:17 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -46,6 +46,29 @@ INSERT INTO `pemasukan` (`id_pemasukan`, `nama_univ`, `nama_fakultas`, `nama_jur
 (1, 'Universitas Telkom', 'Fakultas Informatika', 'S1 Teknik Informatik', '2010-10-23', 15000, 'BPP'),
 (3, 'Universitas Telkom', 'Fakultas Informatika', 'Jurusan A', '2010-12-09', 15000, 'Pembayaran BPP');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pengeluaran`
+--
+
+CREATE TABLE `pengeluaran` (
+  `id_pengeluaran` int(11) NOT NULL,
+  `nama_univ` varchar(20) NOT NULL,
+  `nama_fakultas` varchar(20) NOT NULL,
+  `nama_jurusan` varchar(20) NOT NULL,
+  `tanggal_pengeluaran` date NOT NULL,
+  `jumlah_pengeluaran` int(20) NOT NULL,
+  `asal_pengeluaran` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pengeluaran`
+--
+
+INSERT INTO `pengeluaran` (`id_pengeluaran`, `nama_univ`, `nama_fakultas`, `nama_jurusan`, `tanggal_pengeluaran`, `jumlah_pengeluaran`, `asal_pengeluaran`) VALUES
+(1, 'Universitas Telkom', 'Fakultas Elektro', 'Jurusan B', '2010-12-01', 12000, 'Pembayaran BPP');
+
 --
 -- Indexes for dumped tables
 --
@@ -57,6 +80,12 @@ ALTER TABLE `pemasukan`
   ADD PRIMARY KEY (`id_pemasukan`);
 
 --
+-- Indexes for table `pengeluaran`
+--
+ALTER TABLE `pengeluaran`
+  ADD PRIMARY KEY (`id_pengeluaran`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -65,6 +94,12 @@ ALTER TABLE `pemasukan`
 --
 ALTER TABLE `pemasukan`
   MODIFY `id_pemasukan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `pengeluaran`
+--
+ALTER TABLE `pengeluaran`
+  MODIFY `id_pengeluaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

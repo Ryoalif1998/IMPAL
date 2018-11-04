@@ -41,6 +41,16 @@
 						Log in
 					</span>
 
+					<div class="wrap-input100 validate-input" data-validate = "Enter fullname">
+						<input class="input100" type="text" name="name" placeholder="Fullname">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter email">
+						<input class="input100" type="text" name="mail" placeholder="Email">
+						<span class="focus-input100" data-placeholder="&#xf39f;"></span>
+					</div>
+
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
 						<input class="input100" type="text" name="username" placeholder="Username">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
@@ -53,11 +63,11 @@
 
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn" style="margin-right: 80px">
-							<a href="<?php echo site_url('Cregister');?>">Register</a>
+							<a href="<?php echo site_url('Clogin');?>">Login</a>
 						</button>
 
 						<button class="login100-form-btn">
-							<a href="<?php echo site_url('Cberanda');?>">Login</a>
+							<a href="<?php echo site_url('Cregister');?>">Save</a>
 						</button>
 
 					</div>
