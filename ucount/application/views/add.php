@@ -33,7 +33,7 @@
                                 <a href="<?php echo site_url('Cberanda');?>"><img src="<?php echo base_url("assets/img/core-img/logo.png");?>" alt=""></a>
                             </div>
                             <div class="login-content">
-                                <a href="#">Keluar</a>
+                                <a href="<?php echo site_url('Akun_C/logout') ?>">Keluar</a>
                             </div>
                         </div>
                     </div>
@@ -92,9 +92,9 @@
 
     <div class="container-fluid">
         <div class="row" style="margin-top: 80px">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <a type="button" class="btn btn-primary ?php if($url=='index'){echo 'actived';}?>" href="<?php echo site_url('pemasukan'); ?>">Home</a>
+            <div class="col-md-3"></div>
+            <div class="col-md-7">
+                <a href="<?php echo site_url('pemasukan'); ?>" class="btn btn-primary" role="button">Kembali</a>
             </div>
             <div class="col-md-2"></div>
         </div>
@@ -103,17 +103,14 @@
 
 	<div class="container-fluid">
 		<div class="row">   	
-			<div class="col-md-2"></div>
-	  	    <div class="col-md-8">
+			<div class="col-md-3"></div>
+	  	    <div class="col-md-6" style="margin-top: 30px">
 	    	<h2>Form Input Pemasukan</h2>
 	    	<form method="POST" action="<?php echo site_url('pemasukan/addProses');?>">
 				<div class="form-group">
 				    <label for="exampleInputEmail1">Nama Universitas</label>
-				    <select name="nama_univ" class="form-control">
-                        <option value="none">---</option>
+				    <select name="nama_univ" class="form-control" val>
                         <option value="Universitas Telkom">Universitas Telkom</option>
-                        <option value="Universitas  Udayana">Universitas  Udayana</option>
-                        <option value="Universitas Padjajaran">Universitas Padjajaran</option>
                     </select>
 				</div>
 				<div class="form-group">
@@ -151,7 +148,7 @@
                         <option value="Uang Gedung">Uang Gedung</option>
                     </select>
 				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="submit" class="btn btn-primary" style="margin-bottom: 50px">Submit</button>
 			</form>
 	    	</div>
 	  	</div>

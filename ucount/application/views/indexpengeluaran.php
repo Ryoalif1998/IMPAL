@@ -34,7 +34,7 @@
                                 <a href="<?php echo site_url('Cberanda');?>"><img src="<?php echo base_url("assets/img/core-img/logo.png");?>" alt=""></a>
                             </div>
                             <div class="login-content">
-                                <a href="#">Keluar</a>
+                                <a href="<?php echo site_url('Akun_C/logout') ?>">Keluar</a>
                             </div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
         <div class="row" style="margin-top: 80px">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <a type="button" class="btn btn-primary ?php if($url=='add'){echo 'actived';}?>" href="<?php echo site_url('pengeluaran/add'); ?>">Add Pengeluaran</a>
+                <a href="<?php echo site_url('pengeluaran/add'); ?>" class="btn btn-primary" role="button">Tambah Data</a>
             </div>
             <div class="col-md-2"></div>
         </div>
@@ -105,7 +105,7 @@
 		<div class="row">   	
 			<div class="col-md-2">
 			</div>
-			<div class="col-md-8" style="margin-top: 30px">
+			<div class="col-md-8" style="margin-top: 30px;margin-bottom: 50px">
 	    		<p><?php echo $this->session->flashdata('msg'); ?></p>
 	    		<table class="table">
 				  	<thead>

@@ -30,50 +30,62 @@
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('<?php echo base_url("assets/img/login/bg-01.jpg");?>');">
-			<div class="wrap-login100">
-				<form class="login100-form validate-form">
-					<span class="login100-form-logo">
-						<img src="<?php echo base_url("assets/img/login/logo3.png");?>">
-					</span>
+	    <div class="container-login100" style="background-image: url('<?php echo base_url("assets/img/login/bg-01.jpg");?>');">
+	        <div class="wrap-login100">
+	            <?php $atribut = array(
+	                'class' => 'login100-form validate-form p-l-55 p-r-55 p-t-178'
+	            );?>
+	            <?php
+	            echo form_open("Akun_C/daftar_akun",$atribut);
+	//            isi dengan form_open ke controller Akun_C dengan method daftar_akun
+	            ?>
+					<span class="login100-form-logo" style="margin-top: -200px">
+                    	<img src="<?php echo base_url("assets/img/login/logo3.png");?>">
+	                </span>
 
-					<span class="login100-form-title p-b-34 p-t-27">
-						Log in
-					</span>
+	                <span class="login100-form-title p-b-34 p-t-27">
+	                    Register
+	                </span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Enter fullname">
-						<input class="input100" type="text" name="name" placeholder="Fullname">
-						<span class="focus-input100" data-placeholder="&#xf207;"></span>
-					</div>
+	                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter fullname">
+	                    <input class="input100" type="text" required name="name" placeholder="Fullname">
+	                    <span class="focus-input100"></span>
+	                </div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Enter email">
-						<input class="input100" type="text" name="mail" placeholder="Email">
-						<span class="focus-input100" data-placeholder="&#xf39f;"></span>
-					</div>
+	                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter email">
+	                    <input class="input100" type="email" required name="email" placeholder="Email">
+	                    <span class="focus-input100"></span>
+	                </div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input100" type="text" name="username" placeholder="Username">
-						<span class="focus-input100" data-placeholder="&#xf207;"></span>
-					</div>
+	                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
+	                    <input class="input100" type="text" required name="username" placeholder="Username">
+	                    <span class="focus-input100"></span>
+	                </div>
 
-					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="pass" placeholder="Password">
-						<span class="focus-input100" data-placeholder="&#xf191;"></span>
-					</div>
+	                <div class="wrap-input100 validate-input" data-validate = "Please enter password">
+	                    <input class="input100" type="password" required name="password" placeholder="Password">
+	                    <span class="focus-input100"></span>
+	                </div>
 
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" style="margin-right: 80px">
-							<a href="<?php echo site_url('Clogin');?>">Login</a>
-						</button>
+	                <br>
+	                <div class="container-login100-form-btn">
+	                    <button class="login100-form-btn">
+	                        Daftar
+	                    </button>
+	                </div>
 
-						<button class="login100-form-btn">
-							<a href="<?php echo site_url('Cregister');?>">Save</a>
-						</button>
+	                <div class="flex-col-c p-t-170 p-b-40" style="margin-top: -100px">
+							<span class="txt1 p-b-9">
+								Punya Akun?
+							</span>
 
-					</div>
-				</form>
-			</div>
-		</div>
+	                    <a href="<?php echo site_url('Akun_C/index') ?>" class="txt3" style="margin-bottom: -100px">
+	                        Login Langsung
+	                    </a>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
 	</div>
 	
 

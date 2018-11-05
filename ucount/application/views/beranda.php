@@ -33,7 +33,7 @@
                                 <a href="<?php echo site_url('Cberanda');?>"><img src="<?php echo base_url("assets/img/core-img/logo.png");?>" alt=""></a>
                             </div>
                             <div class="login-content">
-                                <a href="#">Keluar</a>
+                                <a href="<?php echo site_url('Akun_C/logout') ?>">Keluar</a>
                             </div>
                         </div>
                     </div>
